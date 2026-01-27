@@ -79,10 +79,10 @@ const App: React.FC = () => {
         <div className="max-w-5xl pt-12">
           <Badge variant="teal">VEREDICTOS VISION • PARCEIRO OFICIAL PREFEITURA RIO</Badge>
           <h1 className="text-5xl md:text-[5.5rem] font-extrabold leading-[0.95] tracking-tighter mb-8">
-            Como Reduzir em <span className="text-teal-400 italic">68%</span> o Custo de Tratamento de Retinopatia Diabética
+            Como Economizar Mais de <span className="text-teal-400 italic">R$ 1 Milhão</span> por Ano em Tratamento de Retinopatia Diabética
           </h1>
           <p className="text-2xl md:text-4xl font-bold text-slate-300 leading-tight mb-4 tracking-tight">
-            E Zerar a Fila de Casos Graves em 90 Dias
+            E Garantir Que Nenhum Caso Grave Passe Despercebido
           </p>
           <p className="text-xl md:text-2xl font-black text-teal-400/80 uppercase tracking-tighter italic mb-12">
             Integrando IA aos Retinógrafos que Você Já Possui
@@ -295,7 +295,7 @@ const App: React.FC = () => {
         </GlassCard>
 
         {/* Fila Estratificada Visualization */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-20">
           {[
             { 
               color: "bg-green-500", 
@@ -344,7 +344,128 @@ const App: React.FC = () => {
           ))}
         </div>
 
-        {/* Disclaimer Importante */}
+        {/* --- NOVO CARD: A MATEMÁTICA DA EFICIÊNCIA --- */}
+        <GlassCard className="bg-slate-900 border-teal-400/20 shadow-teal-500/5 mb-20 overflow-hidden">
+          {/* 1. Cabeçalho (O Cenário) */}
+          <div className="text-center mb-16 border-b border-white/10 pb-12">
+            <h3 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-white mb-4">
+              📐 A Matemática da Eficiência: <span className="text-teal-400">Veredictos Vision</span>
+            </h3>
+            <p className="text-slate-400 font-bold tracking-widest uppercase text-sm">
+              Município de 100 mil habitantes | <span className="text-white">3.200 Diabéticos em risco</span>.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-px bg-white/10 rounded-[2rem] overflow-hidden border border-white/10">
+            {/* 2. Lado A: Sistema Atual (O Caos) */}
+            <div className="bg-slate-900/80 p-10 md:p-14">
+               <div className="flex items-center gap-4 mb-8">
+                 <AlertTriangle className="w-8 h-8 text-red-500" />
+                 <h4 className="text-2xl font-black text-red-500 uppercase italic">⚠️ SISTEMA ATUAL (O CAOS)</h4>
+               </div>
+               
+               <div className="space-y-8 mb-12">
+                  <div className="p-6 bg-red-500/5 rounded-2xl border border-red-500/10">
+                    <p className="text-xs font-black text-red-400 uppercase tracking-widest mb-1">STATUS</p>
+                    <p className="text-xl font-bold text-white">Fila linear de 3.200 pacientes.</p>
+                  </div>
+                  <div className="p-6 bg-red-500/5 rounded-2xl border border-red-500/10">
+                    <p className="text-xs font-black text-red-400 uppercase tracking-widest mb-1">GARGALO</p>
+                    <p className="text-xl font-bold text-white">Oftalmologista leva 6 meses para atender a todos.</p>
+                  </div>
+                  <div className="p-6 bg-red-600/10 rounded-2xl border border-red-600/20">
+                    <p className="text-xs font-black text-red-500 uppercase tracking-widest mb-1">🚨 O ERRO FATAL</p>
+                    <p className="text-lg font-bold text-slate-300">Casos críticos (3%) esperam o mesmo tempo que casos saudáveis (60%).</p>
+                  </div>
+               </div>
+
+               <div className="space-y-4 pt-8 border-t border-white/10">
+                  <p className="text-xs font-black text-slate-500 uppercase tracking-widest">CUSTOS DETALHADOS</p>
+                  <div className="flex justify-between items-center py-2 border-b border-white/5">
+                    <span className="text-slate-400 font-bold">Consultas (Todos na fila):</span>
+                    <span className="text-white font-black">R$ 576.000</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-white/5">
+                    <span className="text-slate-400 font-bold">Tratamentos Tardios (Sequelas):</span>
+                    <span className="text-white font-black">R$ 1.000.000</span>
+                  </div>
+                  <div className="flex justify-between items-center py-4 text-3xl font-black text-red-500 tracking-tighter">
+                    <span>TOTAL:</span>
+                    <span>R$ 1.576.000</span>
+                  </div>
+               </div>
+            </div>
+
+            {/* 3. Lado B: Veredictos Vision (A Inteligência) */}
+            <div className="bg-teal-400/5 p-10 md:p-14 relative">
+               <div className="absolute top-10 right-10 opacity-10">
+                 <Zap className="w-24 h-24 text-teal-400" />
+               </div>
+               <div className="flex items-center gap-4 mb-8">
+                 <CheckCircle2 className="w-8 h-8 text-teal-400" />
+                 <h4 className="text-2xl font-black text-teal-400 uppercase italic">✅ VEREDICTOS VISION (A INTELIGÊNCIA)</h4>
+               </div>
+
+               <div className="space-y-8 mb-12">
+                  <div className="p-6 bg-teal-400/5 rounded-2xl border border-teal-400/10">
+                    <p className="text-xs font-black text-teal-400 uppercase tracking-widest mb-1">STATUS</p>
+                    <p className="text-xl font-bold text-white">3.200 triados em 15 dias (Estratificação por IA).</p>
+                  </div>
+                  <div className="p-6 bg-teal-400/5 rounded-2xl border border-teal-400/10">
+                    <p className="text-xs font-black text-teal-400 uppercase tracking-widest mb-1">AÇÃO IMEDIATA</p>
+                    <p className="text-xl font-bold text-white">96 casos críticos identificados e encaminhados no Dia 1.</p>
+                  </div>
+                  <div className="p-6 bg-teal-400/10 rounded-2xl border border-teal-400/20">
+                    <p className="text-xs font-black text-teal-400 uppercase tracking-widest mb-1">🎯 OTIMIZAÇÃO</p>
+                    <p className="text-lg font-bold text-slate-300">1.920 casos (Verdes) liberados da fila (Não geram custo de consulta).</p>
+                  </div>
+               </div>
+
+               <div className="space-y-4 pt-8 border-t border-white/10">
+                  <p className="text-xs font-black text-teal-400 uppercase tracking-widest">CUSTOS DETALHADOS</p>
+                  <div className="flex justify-between items-center py-2 border-b border-white/5">
+                    <span className="text-slate-400 font-bold">Triagem Inteligente (IA):</span>
+                    <span className="text-white font-black">R$ 27.200</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-white/5">
+                    <span className="text-slate-400 font-bold">Consultas (Foco Amarelos/Laranjas):</span>
+                    <span className="text-white font-black">R$ 230.400</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-white/5">
+                    <span className="text-slate-400 font-bold">Tratamento Precoce (Prevenção):</span>
+                    <span className="text-white font-black">R$ 96.000</span>
+                  </div>
+                  <div className="flex justify-between items-center py-4 text-3xl font-black text-teal-400 tracking-tighter">
+                    <span>TOTAL:</span>
+                    <span>R$ 353.600</span>
+                  </div>
+               </div>
+            </div>
+          </div>
+
+          {/* 4. Rodapé (O Valor Gerado) */}
+          <div className="mt-12 bg-teal-400 p-10 md:p-14 rounded-[2.5rem] text-slate-950 text-center shadow-2xl shadow-teal-500/20 group">
+             <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-32 mb-10">
+                <div>
+                   <p className="text-xs font-black uppercase tracking-[0.3em] mb-2 opacity-60">ECONOMIA ANUAL</p>
+                   <p className="text-5xl md:text-7xl font-black tracking-tighter italic">R$ 1.222.400</p>
+                </div>
+                <div className="h-20 w-px bg-slate-950/20 hidden md:block"></div>
+                <div>
+                   <p className="text-xs font-black uppercase tracking-[0.3em] mb-2 opacity-60">RETORNO SOBRE INVESTIMENTO</p>
+                   <p className="text-5xl md:text-7xl font-black tracking-tighter italic">ROI: 246%</p>
+                </div>
+             </div>
+             
+             <div className="max-w-3xl mx-auto border-t border-slate-950/10 pt-10">
+                <p className="text-xl md:text-2xl font-black leading-tight italic uppercase tracking-tight group-hover:scale-105 transition-transform">
+                  "Você não está comprando software. Está comprando a eliminação da fila de espera e R$ 1,2 milhão de eficiência operacional por ano."
+                </p>
+             </div>
+          </div>
+        </GlassCard>
+
+        {/* Disclaimer Importante Final */}
         <div className="max-w-4xl mx-auto mb-20">
           <div className="p-8 border-2 border-dashed border-teal-400/30 rounded-[2rem] bg-teal-400/5">
             <h5 className="text-xl font-black text-teal-400 uppercase italic mb-6 flex items-center gap-3">
@@ -364,86 +485,6 @@ const App: React.FC = () => {
           </div>
         </div>
 
-        {/* Matemática da Eficiência */}
-        <GlassCard className="bg-slate-900 border-teal-400/20 shadow-teal-500/5">
-          <div className="text-center mb-16">
-            <h3 className="text-4xl font-black uppercase tracking-tighter italic text-white mb-4">📐 A MATEMÁTICA DA EFICIÊNCIA</h3>
-            <p className="text-slate-500 font-bold tracking-widest uppercase text-xs">Município de 100 mil habitantes · 3.200 diabéticos</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-px bg-white/10 border border-white/10 rounded-[2rem] overflow-hidden mb-12">
-            <div className="bg-slate-900 p-12">
-               <h4 className="text-2xl font-black text-red-500 mb-8 uppercase italic flex items-center gap-3">
-                 <AlertTriangle className="w-6 h-6" /> ⚠️ SISTEMA ATUAL
-               </h4>
-               <ul className="space-y-6 text-slate-400 font-medium">
-                  <li className="flex items-center gap-4">
-                    <span className="w-2 h-2 rounded-full bg-red-500"></span>
-                    Fila desorganizada de 3.200 pacientes (6 meses)
-                  </li>
-                  <li className="flex flex-col gap-2 border-t border-white/5 pt-6">
-                    <span className="text-[10px] font-black uppercase text-slate-500 tracking-widest">Custos Detalhados</span>
-                    <div className="flex justify-between">
-                      <span>• Consultas:</span>
-                      <span className="text-white font-bold">R$ 576.000</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>• Tratamentos Tardios:</span>
-                      <span className="text-white font-bold">R$ 1.000.000</span>
-                    </div>
-                  </li>
-                  <li className="flex justify-between items-center text-3xl font-black text-white pt-6 border-t border-white/10">
-                    <span>TOTAL:</span>
-                    <span className="text-red-500 tracking-tighter">R$ 1.576.000</span>
-                  </li>
-               </ul>
-            </div>
-            <div className="bg-teal-400/5 p-12">
-               <h4 className="text-2xl font-black text-teal-400 mb-8 uppercase italic flex items-center gap-3">
-                 <CheckCircle2 className="w-6 h-6" /> ✅ VEREDICTOS VISION
-               </h4>
-               <ul className="space-y-6 text-slate-300 font-medium">
-                  <li className="flex items-center gap-4">
-                    <span className="w-2 h-2 rounded-full bg-teal-400"></span>
-                    3.200 triados em 15 dias (estratificação IA)
-                  </li>
-                  <li className="flex flex-col gap-2 border-t border-teal-400/10 pt-6">
-                    <span className="text-[10px] font-black uppercase text-teal-400/40 tracking-widest">Custos Detalhados</span>
-                    <div className="flex justify-between">
-                      <span>• Triagem IA:</span>
-                      <span className="text-white font-bold">R$ 27.200</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>• Consultas:</span>
-                      <span className="text-white font-bold">R$ 230.400</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>• Tratamento Precoce:</span>
-                      <span className="text-white font-bold">R$ 96.000</span>
-                    </div>
-                  </li>
-                  <li className="flex justify-between items-center text-3xl font-black text-white pt-6 border-t border-teal-400/20">
-                    <span>TOTAL:</span>
-                    <span className="text-teal-400 tracking-tighter">R$ 353.600</span>
-                  </li>
-               </ul>
-            </div>
-          </div>
-
-          <div className="bg-teal-400 p-12 rounded-[2.5rem] text-slate-950 text-center relative overflow-hidden group">
-             <div className="absolute top-0 right-0 p-12 opacity-5 scale-150 rotate-12 group-hover:scale-[2] transition-transform duration-1000">
-               <DollarSign className="w-48 h-48" />
-             </div>
-             <div className="relative z-10">
-                <p className="text-4xl md:text-7xl font-black tracking-tighter mb-4">💰 ECONOMIA ANUAL: R$ 1.222.400</p>
-                <p className="text-2xl md:text-5xl font-black italic tracking-widest mb-8">🎯 ROI: 345%</p>
-                <p className="text-xl md:text-3xl font-bold uppercase tracking-tight max-w-2xl mx-auto">
-                  Você não está comprando tecnologia.<br/>
-                  <span className="text-slate-900/60">Está comprando R$ 1,2 milhão de economia por ano.</span>
-                </p>
-             </div>
-          </div>
-        </GlassCard>
       </SectionBackground>
 
       {/* SEÇÃO 5: VALIDAÇÃO */}
