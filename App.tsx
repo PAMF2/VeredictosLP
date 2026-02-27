@@ -17,7 +17,22 @@ import {
   Linkedin,
   Scale,
   Lock,
-  HelpCircle
+  HelpCircle,
+  Quote,
+  User,
+  XCircle,
+  ArrowDownNarrowWide,
+  Stethoscope,
+  Eye,
+  FileBadge,
+  ClipboardCheck,
+  Thermometer,
+  Microscope,
+  History,
+  Target,
+  Camera,
+  Cpu,
+  ListOrdered
 } from 'lucide-react';
 
 // --- Theme Components ---
@@ -73,418 +88,533 @@ const App: React.FC = () => {
       {/* SEÇÃO 1: HEADLINE */}
       <SectionBackground 
         imageUrl="https://i.imgur.com/ubM0Jqo.jpeg" 
-        overlayColor="bg-slate-950/75" 
+        overlayColor="bg-slate-950/80" 
         blurClass="backdrop-blur-[2px]"
       >
-        <div className="max-w-5xl pt-12">
+        <div className="max-w-6xl pt-12">
           <Badge variant="teal">VEREDICTOS VISION • PARCEIRO OFICIAL PREFEITURA RIO</Badge>
-          <h1 className="text-5xl md:text-[5.5rem] font-extrabold leading-[0.95] tracking-tighter mb-8">
-            Como Economizar Mais de <span className="text-teal-400 italic">R$ 1 Milhão</span> por Ano em Tratamento de Retinopatia Diabética
+          <h1 className="text-3xl md:text-[4.5rem] font-extrabold leading-[1.1] tracking-tighter mb-4">
+            Potencialize Oftalmologistas.<br/>
+            <span className="text-teal-400 italic">Otimize Triagens. Salve Vidas.</span>
           </h1>
-          <p className="text-2xl md:text-4xl font-bold text-slate-300 leading-tight mb-4 tracking-tight">
-            E Garantir Que Nenhum Caso Grave Passe Despercebido
-          </p>
-          <p className="text-xl md:text-2xl font-black text-teal-400/80 uppercase tracking-tighter italic mb-12">
-            Integrando IA aos Retinógrafos que Você Já Possui
-          </p>
+          <h2 className="text-xl md:text-3xl block text-slate-300 font-medium tracking-tight mb-10 leading-relaxed max-w-4xl">
+            Sistema de IA que analisa retinopatia diabética, glaucoma e doenças vasculares em uma única imagem — priorizando automaticamente quem precisa de atenção urgente.
+          </h2>
           
+          <div className="p-6 bg-teal-400/10 border border-teal-400/20 rounded-2xl mb-12 inline-block">
+            <p className="text-teal-400 font-black uppercase tracking-widest text-sm flex items-center gap-3">
+              <Zap className="w-5 h-5 animate-pulse" /> Economize milhões com detecção e tratamento preventivo
+            </p>
+          </div>
+
           <div className="flex flex-wrap gap-4">
             <a href={whatsappLink} className="px-10 py-5 bg-teal-400 hover:bg-teal-300 text-slate-950 font-black rounded-full transition-all flex items-center gap-3 group shadow-xl shadow-teal-500/20 text-lg">
               Quero Ser Município Pioneiro
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </a>
+            <a href="#como-funciona" className="px-10 py-5 bg-white/5 hover:bg-white/10 text-white font-bold rounded-full transition-all flex items-center gap-3 border border-white/10 text-lg">
+              Ver como funciona
+            </a>
           </div>
         </div>
       </SectionBackground>
 
-      {/* SEÇÃO 2: SUBHEADLINE */}
+      {/* SEÇÃO 2: DUAS EPIDEMIAS SILENCIOSAS */}
       <SectionBackground className="bg-slate-900/30">
-        <div className="max-w-5xl">
-          <Badge>A Realidade da Gestão de Saúde</Badge>
-          <h2 className="text-4xl md:text-6xl font-bold text-white leading-[1.1] tracking-tight mb-12">
-            Para Gestores de Saúde Que Sabem Que Tratamento Tardio de Retinopatia 
-            Custa <span className="text-red-500">R$ 30 Mil por Paciente</span>
-          </h2>
-          <div className="border-l-4 border-teal-400 pl-8 mb-12">
-            <p className="text-2xl md:text-3xl font-medium text-slate-400 leading-relaxed">
-              Mas o sistema atual não consegue identificar quem precisa de atendimento urgente.
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-black text-white leading-tight tracking-tight mb-6 uppercase">
+              Duas Epidemias Silenciosas.<br/>
+              <span className="text-teal-400">Um Sistema Sobrecarregado.</span>
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-medium">
+              Retinopatia diabética e glaucoma são as principais causas de cegueira irreversível no Brasil. Juntas, ameaçam a visão de mais de 18 milhões de brasileiros.
             </p>
           </div>
-          <p className="text-6xl md:text-9xl font-black text-teal-400 italic uppercase tracking-tighter animate-pulse">
-            Até Agora.
-          </p>
-        </div>
-      </SectionBackground>
 
-      {/* SEÇÃO 3: O PROBLEMA */}
-      <SectionBackground imageUrl="https://images.unsplash.com/photo-1579154235828-4019828483be?auto=format&fit=crop&q=80&w=2000" overlayColor="bg-slate-950/90">
-        <div className="mb-20">
-          <Badge variant="red">O Ciclo da Ineficiência Mortal</Badge>
-          <h2 className="text-4xl md:text-7xl font-black tracking-tighter uppercase mb-6 leading-none">
-            🚨 O FLUXO QUE ESTÁ DESPERDIÇANDO<br/>
-            <span className="text-red-500">MILHÕES DO SEU ORÇAMENTO</span>
-          </h2>
-          <p className="text-xl text-slate-400 font-medium italic">Assim funciona hoje no sistema público de oftalmologia:</p>
-        </div>
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
+            <GlassCard className="bg-slate-900/50 border-white/5 p-8 text-center">
+              <div className="w-16 h-16 bg-red-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Activity className="w-8 h-8 text-red-500" />
+              </div>
+              <h3 className="text-4xl font-black text-white mb-2">16M</h3>
+              <p className="text-slate-400 font-medium uppercase tracking-wider text-sm">Diabéticos em risco de Retinopatia Diabética</p>
+            </GlassCard>
+            <GlassCard className="bg-slate-900/50 border-white/5 p-8 text-center">
+              <div className="w-16 h-16 bg-teal-400/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Eye className="w-8 h-8 text-teal-400" />
+              </div>
+              <h3 className="text-4xl font-black text-white mb-2">2.5M</h3>
+              <p className="text-slate-400 font-medium uppercase tracking-wider text-sm">Brasileiros vivem com glaucoma</p>
+            </GlassCard>
+            <GlassCard className="bg-slate-900/50 border-white/5 p-8 text-center">
+              <div className="w-16 h-16 bg-orange-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Clock className="w-8 h-8 text-orange-500" />
+              </div>
+              <h3 className="text-4xl font-black text-white mb-2">6-12m</h3>
+              <p className="text-slate-400 font-medium uppercase tracking-wider text-sm">De espera média para um laudo</p>
+            </GlassCard>
+          </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 mb-20">
-          <GlassCard className="border-l-[16px] border-l-red-500">
-            <h3 className="text-2xl font-black mb-10 uppercase flex items-center gap-4">
-              <Clock className="w-8 h-8 text-red-500" />
-              O Caminho Burocrático
-            </h3>
-            <div className="space-y-6 relative ml-4">
-              <div className="absolute left-[-2px] top-0 bottom-0 w-[2px] bg-white/10"></div>
-              {[
-                "1️⃣ Paciente diabético vai na UBS",
-                "2️⃣ Médico encaminha TODOS os diabéticos pro oftalmologista (sem critério de urgência)",
-                "3️⃣ Paciente entra na fila única de 8-11 meses",
-                "4️⃣ Quando chega no oftalmo, faz fundoscopia",
-                "5️⃣ Volta pra fila pra aguardar resultado e retorno",
-                "6️⃣ Mais 4-6 meses de espera"
-              ].map((step, i) => (
-                <div key={i} className="flex gap-6 items-start group relative">
-                  <div className="w-8 h-8 rounded-full bg-slate-900 border-2 border-white/20 text-white flex items-center justify-center font-black group-hover:border-red-500 transition-all flex-shrink-0 z-10 text-xs">
-                    {i + 1}
+          <GlassCard className="bg-slate-900/50 border-white/5 relative overflow-hidden">
+            <div className="space-y-6">
+              <p className="text-xl text-slate-300 leading-relaxed font-medium">
+                Ambas as doenças não doem. Ambas começam pela visão periférica — o paciente literalmente não percebe que está perdendo a visão.
+              </p>
+              <div className="p-6 bg-teal-400/5 rounded-2xl border border-teal-400/10 relative mt-8">
+                <Quote className="absolute -top-4 -left-4 w-8 h-8 text-teal-400/20 rotate-180" />
+                <p className="text-lg md:text-xl font-bold text-white italic mb-6">
+                  "Quando o paciente percebe que tem alguma coisa errada, até 60% do nervo óptico já foi destruído."
+                </p>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center border border-white/10">
+                    <User className="w-6 h-6 text-slate-400" />
                   </div>
-                  <p className="text-lg text-slate-300 font-bold leading-tight pt-1">{step.substring(4)}</p>
+                  <div>
+                    <p className="font-black text-white text-base">Dr. Roberto Galvão Filho</p>
+                    <p className="text-xs text-teal-400 uppercase font-bold leading-tight">
+                      Presidente da Sociedade Brasileira de Glaucoma
+                    </p>
+                  </div>
                 </div>
-              ))}
-            </div>
-            <div className="mt-12 p-8 bg-red-500/10 rounded-[2rem] border border-red-500/20">
-              <p className="text-red-400 font-black text-xs uppercase mb-1 tracking-widest">⏱️ TEMPO TOTAL:</p>
-              <p className="text-5xl font-black text-red-500 tracking-tighter">12-17 meses</p>
-              <p className="text-sm text-red-400/80 font-medium mt-1 italic">entre primeiro sintoma e diagnóstico definitivo.</p>
+              </div>
             </div>
           </GlassCard>
 
-          <div className="space-y-8">
-            <GlassCard>
-              <h3 className="text-2xl font-black text-red-500 mb-8 uppercase italic">💰 DINHEIRO SENDO JOGADO FORA</h3>
-              <div className="space-y-8">
-                <div>
-                  <h4 className="font-black text-white mb-4 border-b border-white/10 pb-2">Problema 1: Casos Leves Travam a Fila Inteira</h4>
-                  <ul className="space-y-4">
-                    <li className="flex gap-3 text-lg text-slate-300">
-                      <span className="font-black text-red-500">→ 60%</span> NÃO têm retinopatia
-                    </li>
-                    <li className="flex gap-3 text-lg text-slate-300">
-                      <span className="font-black text-orange-400">→ 25%</span> têm retinopatia leve
-                    </li>
-                    <li className="p-6 bg-red-600 rounded-[1.5rem] text-white font-black text-center text-xl shadow-xl">
-                      85% DA FILA OCUPADA POR QUEM PODE ESPERAR
-                    </li>
-                  </ul>
-                  <p className="text-sm text-slate-500 mt-6 italic">Enquanto isso: 15% de casos graves esperam 11 meses na mesma fila.</p>
-                </div>
-              </div>
-            </GlassCard>
+          <div className="grid md:grid-cols-3 gap-8 mt-16 mb-16">
+            <div className="space-y-4">
+              <h4 className="text-teal-400 font-black uppercase tracking-widest text-sm flex items-center gap-2">
+                <User className="w-4 h-4" /> Para o Paciente
+              </h4>
+              <ul className="space-y-3">
+                {[
+                  "Perda irreversível de visão",
+                  "Incapacidade para trabalho",
+                  "Dependência de terceiros",
+                  "Depressão e ansiedade (26,9% dos pacientes glaucoma)"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-slate-300">
+                    <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
+                    <span className="font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-            <GlassCard className="bg-red-500/5 border-red-500/10">
-              <h4 className="font-black text-white mb-6">Problema 2: O Custo Explode no Diagnóstico Tardio</h4>
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                <div className="bg-white/5 p-6 rounded-[1.5rem] border border-white/10">
-                  <p className="text-[10px] font-black text-green-400 uppercase mb-2 tracking-widest italic">TRATAMENTO PRECOCE</p>
-                  <p className="text-2xl font-black text-white">R$ 800-1.500</p>
-                  <p className="text-[10px] text-slate-500 font-bold mt-1 uppercase">Taxa de sucesso: 85%</p>
-                </div>
-                <div className="bg-red-500/10 p-6 rounded-[1.5rem] border border-red-500/20">
-                  <p className="text-[10px] font-black text-red-400 uppercase mb-2 tracking-widest italic">TRATAMENTO TARDIO</p>
-                  <p className="text-2xl font-black text-white">R$ 15-30 MIL</p>
-                  <p className="text-[10px] text-slate-500 font-bold mt-1 uppercase">Taxa de sucesso: 60%</p>
-                </div>
-              </div>
-              <div className="p-6 bg-slate-950/50 rounded-2xl border border-white/5 text-xs text-slate-400 space-y-3">
-                <p className="font-bold text-slate-200">💉 POR QUE R$ 30.000?</p>
-                <p>Pacientes com Retinopatia Proliferativa avançada precisam de 3-6 injeções intravítreas de Anti-VEGF (R$ 5.000 cada) durante 6 meses.</p>
-                <p>Casos mais graves podem precisar de vitrectomia (cirurgia), elevando o custo para <span className="text-red-400 font-bold">R$ 40.000 - R$ 50.000</span>.</p>
-              </div>
-            </GlassCard>
-          </div>
-        </div>
+            <div className="space-y-4">
+              <h4 className="text-teal-400 font-black uppercase tracking-widest text-sm flex items-center gap-2">
+                <Stethoscope className="w-4 h-4" /> Para o Sistema de Saúde
+              </h4>
+              <ul className="space-y-3">
+                {[
+                  "Tratamentos tardios custam 10x mais (laser, vitrectomia, cirurgia de glaucoma)",
+                  "Benefícios por invalidez",
+                  "Cuidadores e suporte social",
+                  "Perda de produtividade econômica"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-slate-300">
+                    <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
+                    <span className="font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-        {/* Matemática do Desastre - Novo Layout Horizontal */}
-        <GlassCard className="bg-slate-900 border-red-500/20 shadow-red-500/5">
-          <div className="flex flex-col md:flex-row justify-between items-center mb-10 gap-6">
-            <h3 className="text-3xl font-black uppercase tracking-tighter flex items-center gap-4">
-              <Calculator className="w-10 h-10 text-red-500" />
-              📊 A MATEMÁTICA DO DESASTRE
-            </h3>
-            <span className="text-slate-500 font-bold uppercase tracking-widest text-xs">Município de 100 mil habitantes</span>
+            <div className="bg-red-500/10 border border-red-500/20 rounded-[2rem] p-8">
+              <h4 className="text-red-500 font-black uppercase tracking-widest text-sm flex items-center gap-2 mb-4">
+                <DollarSign className="w-4 h-4" /> O Custo da Espera
+              </h4>
+              <p className="text-slate-300 font-medium mb-4">
+                Cada caso de cegueira evitável custa ao sistema público <strong className="text-white">R$ 250 mil</strong> ao longo da vida (tratamentos + benefícios).
+              </p>
+              <div className="pt-4 border-t border-red-500/20">
+                <p className="text-sm text-slate-400 font-medium">Com 2 milhões de casos não diagnosticados, o custo potencial é de</p>
+                <p className="text-3xl font-black text-red-500 mt-1">R$ 500 BILHÕES</p>
+              </div>
+            </div>
           </div>
-          
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse">
-              <thead>
-                <tr className="border-b border-white/10">
-                  <th className="py-6 px-4 text-left font-black text-slate-500 uppercase text-xs tracking-widest">Contexto</th>
-                  <th className="py-6 px-4 text-left font-black text-red-500 uppercase text-xs tracking-widest italic">⚠️ Custo Atual</th>
-                  <th className="py-6 px-4 text-left font-black text-teal-400 uppercase text-xs tracking-widest italic">✅ Custo Ideal</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-white/5">
-                <tr>
-                  <td className="py-8 px-4">
-                    <p className="text-xl font-bold text-white mb-2">3.500 Diabéticos</p>
-                    <p className="text-sm text-slate-400">280 triagens/ano (8%)</p>
-                    <p className="text-sm font-black text-red-400 mt-2">42 CASOS TARDIOS</p>
-                  </td>
-                  <td className="py-8 px-4 bg-red-500/5">
-                    <p className="text-lg font-bold text-slate-300 mb-1">42 pacientes com RD Proliferativa</p>
-                    <p className="text-3xl font-black text-red-500">R$ 1.050.000</p>
-                    <p className="text-[10px] text-red-700 font-black mt-2 uppercase">42 × R$ 25k (média)</p>
-                  </td>
-                  <td className="py-8 px-4 bg-teal-400/5">
-                    <p className="text-lg font-bold text-slate-300 mb-1">42 detectados precocemente</p>
-                    <p className="text-3xl font-black text-teal-400">R$ 42.000</p>
-                    <p className="text-[10px] text-teal-700 font-black mt-2 uppercase">42 × R$ 1k (laser)</p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          
-          <div className="text-center pt-12 mt-12 border-t border-white/10">
-            <p className="text-4xl md:text-6xl font-black uppercase text-red-500 mb-4 tracking-tighter">🚨 DESPERDÍCIO ANUAL: R$ 1.008.000</p>
-            <p className="text-xl text-slate-400 italic">E isso é só 42 pacientes. Quantos você tem perdendo visão AGORA porque estão esperando na fila?</p>
-          </div>
-        </GlassCard>
 
-        {/* Problema não é falta de médico */}
-        <div className="mt-20 text-center max-w-4xl mx-auto">
-          <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-8 italic">📊 O PROBLEMA NÃO É "FALTA DE MÉDICO"</h3>
-          <p className="text-2xl text-slate-300 font-medium leading-relaxed">
-            É que o sistema não separa quem precisa de atendimento <strong>URGENTE</strong> de quem pode esperar. 
-            O oftalmologista só descobre a gravidade DEPOIS de atender. Você está pagando R$ 180 por consulta (tabela SUS) pra descobrir que 85% nem precisavam estar ali.
-          </p>
+          <div className="bg-slate-900 border border-white/10 rounded-[2rem] p-8 md:p-12 relative overflow-hidden mb-16">
+            <div className="absolute top-0 left-0 w-1 h-full bg-yellow-500"></div>
+            
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="flex items-center gap-3 mb-6">
+                  <AlertTriangle className="w-8 h-8 text-yellow-500" />
+                  <h3 className="text-2xl font-black text-white uppercase tracking-tight">O Gargalo Não É Tecnologia</h3>
+                </div>
+                
+                <h4 className="text-xl text-yellow-500 font-black uppercase tracking-wider mb-6">É Escala:</h4>
+                
+                <div className="space-y-4 mb-8">
+                  <p className="text-lg text-slate-300 font-medium flex items-center gap-3">
+                    <span className="w-2 h-2 rounded-full bg-slate-600"></span>
+                    Um oftalmologista avalia 20-30 exames/dia.
+                  </p>
+                  <p className="text-lg text-slate-300 font-medium flex items-center gap-3">
+                    <span className="w-2 h-2 rounded-full bg-slate-600"></span>
+                    18,5 milhões de pessoas precisam de triagem.
+                  </p>
+                </div>
+
+                <p className="text-2xl font-black text-white uppercase tracking-tight">
+                  É matematicamente impossível sem IA.
+                </p>
+              </div>
+
+              <div className="bg-white/5 rounded-2xl p-8 border border-white/10 h-full flex flex-col justify-center">
+                <p className="text-sm text-teal-400 font-black uppercase tracking-widest mb-6">Precisamos de triagem inteligente que:</p>
+                <ul className="space-y-5">
+                  {[
+                    "Detecte múltiplas patologias simultaneamente",
+                    "Priorize quem realmente precisa de atenção",
+                    "Libere o especialista para casos complexos"
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-4 text-slate-300 font-medium text-lg">
+                      <CheckCircle2 className="w-6 h-6 text-teal-400 shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center max-w-4xl mx-auto">
+            <p className="text-2xl md:text-3xl font-medium text-slate-300 leading-relaxed mb-12">
+              E se pudéssemos detectar <strong className="text-white">AMBAS as doenças em uma única imagem</strong>, 
+              priorizar automaticamente os casos urgentes, e aumentar a 
+              capacidade de triagem em 3x — <span className="text-teal-400 italic">sem custo adicional?</span>
+            </p>
+            
+            <p className="text-3xl md:text-4xl font-black text-white uppercase tracking-tight mb-12">
+              Isso é o que a Veredictos Vision faz.
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-4">
+              <a href="#como-funciona" className="px-10 py-5 bg-teal-400 hover:bg-teal-300 text-slate-950 font-black rounded-full transition-all flex items-center gap-3 group shadow-xl shadow-teal-500/20 text-lg">
+                Conhecer a Solução
+                <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <a href={whatsappLink} className="px-10 py-5 bg-white/5 hover:bg-white/10 text-white font-bold rounded-full transition-all flex items-center gap-3 border border-white/10 text-lg">
+                Agendar Demonstração
+              </a>
+            </div>
+          </div>
         </div>
       </SectionBackground>
 
-      {/* SEÇÃO 4: A SOLUÇÃO */}
-      <SectionBackground imageUrl="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=2000" overlayColor="bg-slate-950/95">
-        <div className="mb-20">
-          <Badge variant="teal">O Mecanismo Único</Badge>
-          <h2 className="text-4xl md:text-7xl font-black tracking-tighter uppercase mb-6 leading-none">
-            🔬 COMO TRIPLICAR A CAPACIDADE DOS SEUS OFTALMOLOGISTAS<br/>
-            <span className="text-teal-400 italic">Sem Contratar Novos Profissionais. Sem Aumentar Orçamento.</span>
+      {/* SEÇÃO 3: TRIAGEM MULTI-PATOLOGIA */}
+      <SectionBackground imageUrl="https://images.unsplash.com/photo-1579154235828-4019828483be?auto=format&fit=crop&q=80&w=2000" overlayColor="bg-slate-950/95">
+        <div className="mb-20 text-center">
+          <Badge variant="teal">Tecnologia de Ponta</Badge>
+          <h2 className="text-3xl md:text-6xl font-black tracking-tighter uppercase mb-6 leading-none">
+            Triagem Multi-Patologia em<br/>
+            <span className="text-teal-400">Uma Única Imagem</span>
           </h2>
+          <p className="text-xl md:text-2xl text-slate-300 font-medium max-w-4xl mx-auto leading-relaxed">
+            Retinopatia diabética, glaucoma e análise vascular — detectadas simultaneamente com precisão de nível especialista.
+          </p>
         </div>
 
-        <GlassCard className="mb-20 bg-slate-900/40">
-          <h3 className="text-3xl font-black text-teal-400 mb-12 uppercase italic border-b border-white/10 pb-4 flex items-center gap-4">
-            <Zap className="w-8 h-8" /> A SOLUÇÃO: Sistema de Priorização Inteligente
+        <div className="mb-24">
+          <h3 className="text-2xl font-black uppercase text-white mb-12 text-center tracking-widest">
+            COMO FUNCIONA <span className="text-teal-400">(Fluxo de 4 Etapas)</span>
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { num: 1, title: "Triagem Universal", desc: "Enfermeiro treinado faz foto de fundo de olho na UBS em 2 min com o Retinógrafo da unidade. Nossa I.A capta o exame." },
-              { num: 2, title: "Análise Inteligente", desc: "IA analisa imagem + dados clínicos (HbA1c, PA, tempo de DM). Detecta microaneurismas, hemorragias e edema em 30 seg." },
-              { num: 3, title: "Fila de Priorização", desc: "Sistema cria fila estratificada em 4 níveis. Médico sabe exatamente quem precisa dele agora." },
-              { num: 4, title: "Oftalmologista Potencializado", desc: <div className="space-y-2 mt-1"><p className="flex items-center gap-2">Antes: 70% com casos normais ❌</p><p className="flex items-center gap-2">Depois: 100% focado em casos críticos ✅</p><p className="flex items-center gap-2">3x mais impacto clínico 📈</p></div> }
-            ].map((s, i) => (
-              <div key={i} className="space-y-4">
-                <div className="w-12 h-12 bg-teal-400 text-slate-950 rounded-xl flex items-center justify-center font-black text-xl shadow-lg">{s.num}</div>
-                <h4 className="text-lg font-black uppercase text-white">{s.title}</h4>
-                <div className="text-sm text-slate-400 font-medium leading-relaxed italic">{s.desc}</div>
-              </div>
-            ))}
-          </div>
-          <div className="mt-12 p-6 bg-teal-400/5 rounded-2xl border border-teal-400/10 flex items-center gap-4">
-            <Lock className="w-8 h-8 text-teal-400" />
-            <p className="text-sm font-bold text-teal-400 uppercase tracking-widest">🔒 100% conforme LGPD • Dados criptografados (AES-256) • Servidores em território nacional</p>
-          </div>
-        </GlassCard>
-
-        {/* Fila Estratificada Visualization */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-20">
-          {[
-            { 
-              color: "bg-green-500", 
-              p: "60%", 
-              label: "🟢 VERDE", 
-              desc: "Sem retinopatia ou alterações mínimas.",
-              action: "NÃO vai ao oftalmo agora. Orientação automática + retorno em 12 meses.",
-              gain: "✅ Libera 60% das vagas da fila"
-            },
-            { 
-              color: "bg-yellow-400", 
-              p: "25%", 
-              label: "🟡 AMARELO", 
-              desc: "Retinopatia leve estável.",
-              action: "Oftalmologista em 6 MESES (janela segura). Sem risco de progressão rápida.",
-              gain: "📅 Pode esperar com segurança"
-            },
-            { 
-              color: "bg-orange-500", 
-              p: "12%", 
-              label: "🟠 LARANJA", 
-              desc: "Retinopatia moderada com risco de agravar.",
-              action: "⚠️ PRIORIDADE ALTA: Oftalmo em 15-30 DIAS. Sinaliza necessidade de laser.",
-              gain: "⏱️ Janela crítica de intervenção"
-            },
-            { 
-              color: "bg-red-600", 
-              p: "3%", 
-              label: "🔴 VERMELHO", 
-              desc: "Retinopatia proliferativa ou edema macular.",
-              action: "🚨 URGÊNCIA MÁXIMA: Oftalmo em 7-14 DIAS. Risco iminente de perda de visão.",
-              gain: "⚡ Atendimento imediato salva visão"
-            }
-          ].map((level, i) => (
-            <div key={i} className="bg-white/5 backdrop-blur-md rounded-[2.5rem] p-8 border border-white/10 flex flex-col justify-between hover:bg-white/10 transition-all group">
-              <div>
-                <div className={`${level.color} w-16 h-16 rounded-full flex items-center justify-center text-slate-950 font-black text-xl mb-6 shadow-lg group-hover:scale-110 transition-transform`}>
-                  {level.p}
-                </div>
-                <h4 className="text-xl font-black mb-2">{level.label}</h4>
-                <p className="text-sm text-slate-400 font-bold mb-4">{level.desc}</p>
-                <p className="text-xs text-slate-300 leading-relaxed italic mb-6">{level.action}</p>
-              </div>
-              <p className="text-[10px] font-black uppercase tracking-widest text-teal-400 border-t border-white/10 pt-4">{level.gain}</p>
+          
+          <div className="bg-slate-900/80 border border-white/10 rounded-[3rem] p-8 md:p-12 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-400 via-blue-500 to-purple-500"></div>
+            
+            <div className="flex items-center justify-center gap-4 mb-16">
+              <Zap className="w-8 h-8 text-teal-400" />
+              <h4 className="text-xl md:text-2xl font-black text-white uppercase tracking-widest">
+                A Solução: Sistema de Priorização Inteligente
+              </h4>
             </div>
-          ))}
+
+            <div className="grid md:grid-cols-4 gap-8 relative">
+              {/* Connecting line for desktop */}
+              <div className="hidden md:block absolute top-12 left-[12.5%] right-[12.5%] h-0.5 bg-white/10 z-0"></div>
+
+              {[
+                {
+                  step: "1",
+                  title: "TRIAGEM UNIVERSAL",
+                  icon: <Camera className="w-8 h-8" />,
+                  items: [
+                    "Enfermeiro tira foto de fundo de olho",
+                    "Equipamento: Retinógrafo local",
+                    "Captura digital segura (LGPD compliant)"
+                  ]
+                },
+                {
+                  step: "2",
+                  title: "ANÁLISE INTELIGENTE",
+                  icon: <Cpu className="w-8 h-8" />,
+                  items: [
+                    "IA analisa imagem em 30s + dados clínicos",
+                    "Detecta 3 patologias simultaneamente:",
+                    { text: "Retinopatia Diabética (5 graus)", indent: true },
+                    { text: "Glaucoma (CDR + 4 níveis de risco)", indent: true },
+                    { text: "Saúde Vascular (densidade/rarefação)", indent: true },
+                    "96.2% de precisão (nível especialista)",
+                    "Laudo técnico automático"
+                  ]
+                },
+                {
+                  step: "3",
+                  title: "FILA DE PRIORIZAÇÃO",
+                  icon: <ListOrdered className="w-8 h-8" />,
+                  items: [
+                    "Sistema cria fila estratificada:",
+                    { text: "🔴 VERMELHO - Imediato (7-14 dias)", indent: true },
+                    { text: "🟠 LARANJA - Alta prioridade (15-30 dias)", indent: true },
+                    { text: "🟡 AMARELO - Monitoramento (3-6 meses)", indent: true },
+                    { text: "🟢 VERDE - Acompanhamento (6-12 meses)", indent: true },
+                    "Médico sabe quem atender primeiro",
+                    "60% dos casos saem direto da fila"
+                  ]
+                },
+                {
+                  step: "4",
+                  title: "OFTALMO POTENCIALIZADO",
+                  icon: <Stethoscope className="w-8 h-8" />,
+                  items: [
+                    "Laudo pré-processado pela IA",
+                    "Foco apenas em casos que precisam de atenção",
+                    "3x mais produtivo",
+                    "Decisões clínicas assistidas por dados"
+                  ]
+                }
+              ].map((phase, i) => (
+                <div key={i} className="relative z-10 flex flex-col items-center">
+                  <div className="w-24 h-24 rounded-full bg-slate-950 border-4 border-teal-400/30 flex items-center justify-center text-teal-400 mb-6 shadow-xl shadow-teal-900/50">
+                    {phase.icon}
+                  </div>
+                  <div className="bg-white/5 border border-white/10 rounded-2xl p-6 w-full h-full">
+                    <div className="text-center mb-6 border-b border-white/10 pb-4">
+                      <span className="text-teal-400 font-black text-sm tracking-widest block mb-1">ETAPA {phase.step}</span>
+                      <h5 className="text-white font-black uppercase">{phase.title}</h5>
+                    </div>
+                    <ul className="space-y-3">
+                      {phase.items.map((item, j) => {
+                        const isObject = typeof item === 'object';
+                        const text = isObject ? item.text : item;
+                        const indent = isObject && item.indent;
+                        const isColorCoded = text.startsWith("🔴") || text.startsWith("🟠") || text.startsWith("🟡") || text.startsWith("🟢");
+                        
+                        return (
+                          <li key={j} className={`text-sm text-slate-300 font-medium flex items-start gap-2 ${indent ? 'ml-4' : ''}`}>
+                            {!indent && <span className="text-teal-400 mt-1">•</span>}
+                            {indent && !isColorCoded && <span className="text-slate-500 mt-1">-</span>}
+                            <span className={isColorCoded ? "font-bold" : ""}>
+                              {text}
+                            </span>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
-        {/* --- NOVO CARD: A MATEMÁTICA DA EFICIÊNCIA --- */}
-        <GlassCard className="bg-slate-900 border-teal-400/20 shadow-teal-500/5 mb-20 overflow-hidden">
-          {/* 1. Cabeçalho (O Cenário) */}
-          <div className="text-center mb-16 border-b border-white/10 pb-12">
-            <h3 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-white mb-4">
-              📐 A Matemática da Eficiência: <span className="text-teal-400">Veredictos Vision</span>
-            </h3>
-            <p className="text-slate-400 font-bold tracking-widest uppercase text-sm">
-              Município de 100 mil habitantes | <span className="text-white">3.200 Diabéticos em risco</span>.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-px bg-white/10 rounded-[2rem] overflow-hidden border border-white/10">
-            {/* 2. Lado A: Sistema Atual (O Caos) */}
-            <div className="bg-slate-900/80 p-10 md:p-14">
-               <div className="flex items-center gap-4 mb-8">
-                 <AlertTriangle className="w-8 h-8 text-red-500" />
-                 <h4 className="text-2xl font-black text-red-500 uppercase italic">⚠️ SISTEMA ATUAL (O CAOS)</h4>
-               </div>
-               
-               <div className="space-y-8 mb-12">
-                  <div className="p-6 bg-red-500/5 rounded-2xl border border-red-500/10">
-                    <p className="text-xs font-black text-red-400 uppercase tracking-widest mb-1">STATUS</p>
-                    <p className="text-xl font-bold text-white">Fila linear de 3.200 pacientes.</p>
-                  </div>
-                  <div className="p-6 bg-red-500/5 rounded-2xl border border-red-500/10">
-                    <p className="text-xs font-black text-red-400 uppercase tracking-widest mb-1">GARGALO</p>
-                    <p className="text-xl font-bold text-white">Oftalmologista leva 6 meses para atender a todos.</p>
-                  </div>
-                  <div className="p-6 bg-red-600/10 rounded-2xl border border-red-600/20">
-                    <p className="text-xs font-black text-red-500 uppercase tracking-widest mb-1">🚨 O ERRO FATAL</p>
-                    <p className="text-lg font-bold text-slate-300">Casos críticos (3%) esperam o mesmo tempo que casos saudáveis (60%).</p>
-                  </div>
-               </div>
-
-               <div className="space-y-4 pt-8 border-t border-white/10">
-                  <p className="text-xs font-black text-slate-500 uppercase tracking-widest">CUSTOS DETALHADOS</p>
-                  <div className="flex justify-between items-center py-2 border-b border-white/5">
-                    <span className="text-slate-400 font-bold">Consultas (Todos na fila):</span>
-                    <span className="text-white font-black">R$ 576.000</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/5">
-                    <span className="text-slate-400 font-bold">Tratamentos Tardios (Sequelas):</span>
-                    <span className="text-white font-black">R$ 1.000.000</span>
-                  </div>
-                  <div className="flex justify-between items-center py-4 text-3xl font-black text-red-500 tracking-tighter">
-                    <span>TOTAL:</span>
-                    <span>R$ 1.576.000</span>
-                  </div>
-               </div>
-            </div>
-
-            {/* 3. Lado B: Veredictos Vision (A Inteligência) */}
-            <div className="bg-teal-400/5 p-10 md:p-14 relative">
-               <div className="absolute top-10 right-10 opacity-10">
-                 <Zap className="w-24 h-24 text-teal-400" />
-               </div>
-               <div className="flex items-center gap-4 mb-8">
-                 <CheckCircle2 className="w-8 h-8 text-teal-400" />
-                 <h4 className="text-2xl font-black text-teal-400 uppercase italic">✅ VEREDICTOS VISION (A INTELIGÊNCIA)</h4>
-               </div>
-
-               <div className="space-y-8 mb-12">
-                  <div className="p-6 bg-teal-400/5 rounded-2xl border border-teal-400/10">
-                    <p className="text-xs font-black text-teal-400 uppercase tracking-widest mb-1">STATUS</p>
-                    <p className="text-xl font-bold text-white">3.200 triados em 15 dias (Estratificação por IA).</p>
-                  </div>
-                  <div className="p-6 bg-teal-400/5 rounded-2xl border border-teal-400/10">
-                    <p className="text-xs font-black text-teal-400 uppercase tracking-widest mb-1">AÇÃO IMEDIATA</p>
-                    <p className="text-xl font-bold text-white">96 casos críticos identificados e encaminhados no Dia 1.</p>
-                  </div>
-                  <div className="p-6 bg-teal-400/10 rounded-2xl border border-teal-400/20">
-                    <p className="text-xs font-black text-teal-400 uppercase tracking-widest mb-1">🎯 OTIMIZAÇÃO</p>
-                    <p className="text-lg font-bold text-slate-300">1.920 casos (Verdes) liberados da fila (Não geram custo de consulta).</p>
-                  </div>
-               </div>
-
-               <div className="space-y-4 pt-8 border-t border-white/10">
-                  <p className="text-xs font-black text-teal-400 uppercase tracking-widest">CUSTOS DETALHADOS</p>
-                  <div className="flex justify-between items-center py-2 border-b border-white/5">
-                    <span className="text-slate-400 font-bold">Triagem Inteligente (IA):</span>
-                    <span className="text-white font-black">R$ 27.200</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/5">
-                    <span className="text-slate-400 font-bold">Consultas (Foco Amarelos/Laranjas):</span>
-                    <span className="text-white font-black">R$ 230.400</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-white/5">
-                    <span className="text-slate-400 font-bold">Tratamento Precoce (Prevenção):</span>
-                    <span className="text-white font-black">R$ 96.000</span>
-                  </div>
-                  <div className="flex justify-between items-center py-4 text-3xl font-black text-teal-400 tracking-tighter">
-                    <span>TOTAL:</span>
-                    <span>R$ 353.600</span>
-                  </div>
-               </div>
-            </div>
-          </div>
-
-          {/* 4. Rodapé (O Valor Gerado) */}
-          <div className="mt-12 bg-teal-400 p-10 md:p-14 rounded-[2.5rem] text-slate-950 text-center shadow-2xl shadow-teal-500/20 group">
-             <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-32 mb-10">
-                <div>
-                   <p className="text-xs font-black uppercase tracking-[0.3em] mb-2 opacity-60">ECONOMIA ANUAL</p>
-                   <p className="text-5xl md:text-7xl font-black tracking-tighter italic">R$ 1.222.400</p>
+        <div>
+          <h3 className="text-2xl font-black uppercase text-white mb-12 text-center tracking-widest">
+            BENEFÍCIOS POR STAKEHOLDER
+          </h3>
+          
+          <div className="grid lg:grid-cols-3 gap-8">
+            <GlassCard className="bg-slate-900/80 border-white/10 hover:border-teal-400/30 transition-colors">
+              <div className="flex items-center gap-4 mb-8 border-b border-white/10 pb-6">
+                <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center">
+                  <Target className="w-6 h-6 text-blue-400" />
                 </div>
-                <div className="h-20 w-px bg-slate-950/20 hidden md:block"></div>
-                <div>
-                   <p className="text-xs font-black uppercase tracking-[0.3em] mb-2 opacity-60">RETORNO SOBRE INVESTIMENTO</p>
-                   <p className="text-5xl md:text-7xl font-black tracking-tighter italic">ROI: 246%</p>
+                <h4 className="text-xl font-black text-white uppercase tracking-wider">Para Gestores Hospitalares</h4>
+              </div>
+              <ul className="space-y-4">
+                {[
+                  "Redução de 40% no tempo de triagem",
+                  "Aumento de 3x na capacidade de atendimento",
+                  "Zero custo adicional de infraestrutura",
+                  "Compliance total com LGPD",
+                  "Dashboard gerencial em tempo real"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-slate-300 font-medium">
+                    <CheckCircle2 className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </GlassCard>
+
+            <GlassCard className="bg-slate-900/80 border-white/10 hover:border-teal-400/30 transition-colors">
+              <div className="flex items-center gap-4 mb-8 border-b border-white/10 pb-6">
+                <div className="w-12 h-12 rounded-xl bg-teal-400/20 flex items-center justify-center">
+                  <Stethoscope className="w-6 h-6 text-teal-400" />
                 </div>
-             </div>
-             
-             <div className="max-w-3xl mx-auto border-t border-slate-950/10 pt-10">
-                <p className="text-xl md:text-2xl font-black leading-tight italic uppercase tracking-tight group-hover:scale-105 transition-transform">
-                  "Você não está comprando software. Está comprando a eliminação da fila de espera e R$ 1,2 milhão de eficiência operacional por ano."
+                <h4 className="text-xl font-black text-white uppercase tracking-wider">Para Oftalmologistas</h4>
+              </div>
+              <ul className="space-y-4">
+                {[
+                  "Pré-análise automática confiável",
+                  "Fila já priorizada por urgência",
+                  "Laudo técnico como segunda opinião",
+                  "Foco em casos complexos",
+                  "Redução de burnout"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-slate-300 font-medium">
+                    <CheckCircle2 className="w-5 h-5 text-teal-400 shrink-0 mt-0.5" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </GlassCard>
+
+            <GlassCard className="bg-slate-900/80 border-white/10 hover:border-teal-400/30 transition-colors">
+              <div className="flex items-center gap-4 mb-8 border-b border-white/10 pb-6">
+                <div className="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center">
+                  <User className="w-6 h-6 text-purple-400" />
+                </div>
+                <h4 className="text-xl font-black text-white uppercase tracking-wider">Para Pacientes</h4>
+              </div>
+              <ul className="space-y-4">
+                {[
+                  "Atendimento mais rápido",
+                  "Detecção precoce salva visão",
+                  "Casos urgentes priorizados automaticamente",
+                  "Menos tempo de espera em filas"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-slate-300 font-medium">
+                    <CheckCircle2 className="w-5 h-5 text-purple-400 shrink-0 mt-0.5" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </GlassCard>
+          </div>
+        </div>
+      </SectionBackground>
+
+      {/* SEÇÃO 4: FOUNDERS */}
+      <SectionBackground className="bg-slate-950">
+        <div className="mb-20 text-center">
+          <Badge variant="teal">Nossa História</Badge>
+          <h2 className="text-3xl md:text-6xl font-black tracking-tighter uppercase mb-6 leading-none">
+            Fundado por Quem<br/>
+            <span className="text-teal-400">Viveu o Problema</span>
+          </h2>
+          <p className="text-xl md:text-2xl text-slate-300 font-medium max-w-4xl mx-auto leading-relaxed">
+            Combinamos experiência técnica de ponta com profundo entendimento do SUS brasileiro.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-8">
+          {/* Gabriel Maia */}
+          <GlassCard className="bg-slate-900/80 border-white/10 relative overflow-hidden group">
+            <div className="absolute top-0 left-0 w-full h-1 bg-teal-400"></div>
+            <div className="flex flex-col h-full">
+              <div className="flex items-center gap-6 mb-8">
+                <div className="w-24 h-24 rounded-full bg-slate-800 border-2 border-teal-400/30 overflow-hidden flex-shrink-0">
+                  <img src="https://i.imgur.com/IwEAcpq_d.png?maxwidth=520&shape=thumb&fidelity=high" alt="Gabriel Maia" className="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-black text-white uppercase tracking-wider">Gabriel Maia</h3>
+                  <p className="text-teal-400 font-black uppercase tracking-widest text-sm">CEO & Co-Fundador</p>
+                </div>
+              </div>
+              
+              <div className="p-6 bg-teal-400/5 rounded-2xl border border-teal-400/10 relative mb-8 flex-grow">
+                <Quote className="absolute -top-3 -left-3 w-6 h-6 text-teal-400/30 rotate-180" />
+                <p className="text-slate-300 font-medium leading-relaxed italic relative z-10">
+                  "Meu avô ficou cego por falta de triagem preventiva. Construí a Veredictos Vision para que isso não aconteça com milhões de brasileiros."
                 </p>
-             </div>
-          </div>
-        </GlassCard>
+              </div>
 
-        {/* Disclaimer Importante Final */}
-        <div className="max-w-4xl mx-auto mb-20">
-          <div className="p-8 border-2 border-dashed border-teal-400/30 rounded-[2rem] bg-teal-400/5">
-            <h5 className="text-xl font-black text-teal-400 uppercase italic mb-6 flex items-center gap-3">
-              <Scale className="w-6 h-6" /> ⚖️ IMPORTANTE SOBRE O PAPEL DO OFTALMOLOGISTA
-            </h5>
-            <div className="grid md:grid-cols-2 gap-4 text-sm text-slate-300">
               <ul className="space-y-3">
-                <li className="flex items-start gap-2">• O sistema NÃO dá diagnóstico definitivo</li>
-                <li className="flex items-start gap-2">• O oftalmologista SEMPRE diagnostica e trata</li>
-              </ul>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-2">• A IA apenas organiza a fila por urgência</li>
-                <li className="flex items-start gap-2">• Médico recebe pacientes já estratificados por risco</li>
+                {[
+                  "Gestão e Estratégia de Produto",
+                  "Google for Startups Bootcamp",
+                  "1º Lugar Crew AI Challenge (global)",
+                  "Especialista em produtos de I.A"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-sm text-slate-400 font-medium">
+                    <span className="text-teal-400 mt-1">•</span>
+                    {item}
+                  </li>
+                ))}
               </ul>
             </div>
-            <p className="mt-6 font-bold text-teal-400/80 italic text-center text-lg">Objetivo: Potencializar o trabalho do especialista, não substituí-lo.</p>
-          </div>
+          </GlassCard>
+
+          {/* Pedro Afonso */}
+          <GlassCard className="bg-slate-900/80 border-white/10 relative overflow-hidden group">
+            <div className="absolute top-0 left-0 w-full h-1 bg-blue-500"></div>
+            <div className="flex flex-col h-full">
+              <div className="flex items-center gap-6 mb-8">
+                <div className="w-24 h-24 rounded-full bg-slate-800 border-2 border-blue-500/30 overflow-hidden flex-shrink-0">
+                  <img src="https://i.imgur.com/40DXd4t_d.png?maxwidth=520&shape=thumb&fidelity=high" alt="Pedro Afonso" className="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-black text-white uppercase tracking-wider">Pedro Afonso</h3>
+                  <p className="text-blue-400 font-black uppercase tracking-widest text-sm">CTO & Co-Fundador</p>
+                </div>
+              </div>
+              
+              <div className="p-6 bg-blue-500/5 rounded-2xl border border-blue-500/10 relative mb-8 flex-grow">
+                <Quote className="absolute -top-3 -left-3 w-6 h-6 text-blue-500/30 rotate-180" />
+                <p className="text-slate-300 font-medium leading-relaxed italic relative z-10">
+                  "Sistemas de IA precisam ser transparentes e auditáveis para serem confiáveis na medicina. Construímos isso desde o primeiro dia."
+                </p>
+              </div>
+
+              <ul className="space-y-3">
+                {[
+                  "Engenheiro de Machine Learning",
+                  "Arquiteto de Sistemas Multi-Agente",
+                  "Especialista em reprodutibilidade científica",
+                  "Publicações em AI médica",
+                  "1º Lugar Crew AI Challenge (global)"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-sm text-slate-400 font-medium">
+                    <span className="text-blue-500 mt-1">•</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </GlassCard>
         </div>
 
+        {/* Dr. João Batista */}
+        <div className="max-w-3xl mx-auto">
+          <GlassCard className="bg-slate-900/80 border-white/10 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-1 bg-purple-500"></div>
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="w-32 h-32 rounded-full bg-slate-800 border-2 border-purple-500/30 overflow-hidden flex-shrink-0">
+                <img src="https://i.imgur.com/4DzxfYT_d.png?maxwidth=520&shape=thumb&fidelity=high" alt="Dr. João Batista" className="w-full h-full object-cover" />
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="text-2xl font-black text-white uppercase tracking-wider mb-1">Dr. João Batista</h3>
+                <p className="text-purple-400 font-black uppercase tracking-widest text-sm mb-6">Oftalmologista | Advisor Médico & Co-Fundador</p>
+                
+                <ul className="space-y-3 inline-block text-left">
+                  {[
+                    "6 anos de experiência em oftalmologia",
+                    "Especialista em retina"
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-sm text-slate-400 font-medium">
+                      <span className="text-purple-500 mt-1">•</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </GlassCard>
+        </div>
       </SectionBackground>
 
       {/* SEÇÃO 5: VALIDAÇÃO */}
@@ -507,36 +637,41 @@ const App: React.FC = () => {
                  <p className="text-sm text-slate-500 mt-2 italic">Detecta 96 de cada 100 casos graves.</p>
                </div>
                <div>
-                 <p className="text-6xl font-black text-teal-400 mb-2">91,8%</p>
-                 <p className="font-bold text-white uppercase tracking-widest text-xs">Especificidade</p>
-                 <p className="text-sm text-slate-500 mt-2 italic">Evita 92 de cada 100 falsos alarmes.</p>
+                 <p className="text-6xl font-black text-teal-400 mb-2">94,6%</p>
+                 <p className="font-bold text-white uppercase tracking-widest text-xs">Sensibilidade</p>
+                 <p className="text-sm text-slate-500 mt-2 italic">Evita 94 de cada 100 falsos alarmes.</p>
                </div>
             </div>
             <div className="mt-12 p-6 bg-white/5 rounded-[1.5rem] border border-white/10 text-slate-400 text-sm italic">
-              "Sistema em processo de certificação ANVISA e validação em Termos de Cooperação Técnica com hospitais públicos de referência."
+              "Sistema em processo de certificação ANVISA e validação em Termos de Cooperação Técnica com Secretaria de Saúde da cidade do Rio."
             </div>
           </GlassCard>
 
-          <GlassCard className="flex flex-col justify-between">
-            <div>
-               <h3 className="text-xl font-black uppercase mb-8 border-b border-white/10 pb-4 italic">🏅 Reconhecimento</h3>
-               <div className="flex items-center gap-4 mb-6">
-                 <div className="w-12 h-12 bg-yellow-500 text-slate-950 rounded-full flex items-center justify-center font-black">AI</div>
-                 <div>
-                    <p className="font-black text-white text-sm">Vencedor CrewAI Hackathon 2025</p>
-                    <p className="text-[10px] text-slate-500 italic uppercase">Global AI Competition</p>
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7408966417108152321/" target="_blank" rel="noopener noreferrer" className="block group">
+            <GlassCard className="flex flex-col justify-between h-full hover:border-teal-400/30 transition-colors">
+              <div>
+                 <h3 className="text-xl font-black uppercase mb-8 border-b border-white/10 pb-4 italic group-hover:text-teal-400 transition-colors">🏅 Reconhecimento</h3>
+                 <div className="flex items-center gap-4 mb-6">
+                   <div className="w-12 h-12 bg-yellow-500 text-slate-950 rounded-full flex items-center justify-center font-black">AI</div>
+                   <div>
+                      <p className="font-black text-white text-sm">Vencedor Crew AI Challenge 2025</p>
+                      <p className="text-[10px] text-slate-500 italic uppercase">Global AI Competition</p>
+                   </div>
                  </div>
-               </div>
-               <div className="space-y-2">
-                 <p className="text-xs text-teal-400 font-black uppercase tracking-widest">Projeto escolhido entre centenas de soluções de 40+ países</p>
-                 <p className="text-sm text-slate-400 leading-relaxed font-bold italic">"Reconhecido pela arquitetura inovadora de análise médica."</p>
-               </div>
-            </div>
-            <div className="mt-8 flex items-center gap-2">
-               <ShieldCheck className="w-5 h-5 text-teal-400" />
-               <span className="text-[10px] font-black uppercase tracking-widest text-teal-400">Excelência Global</span>
-            </div>
-          </GlassCard>
+                 <div className="space-y-2">
+                   <p className="text-xs text-teal-400 font-black uppercase tracking-widest">Projeto escolhido entre centenas de soluções de 40+ países</p>
+                   <p className="text-sm text-slate-400 leading-relaxed font-bold italic">"Reconhecido pela arquitetura inovadora de análise médica."</p>
+                 </div>
+              </div>
+              <div className="mt-8 flex items-center justify-between">
+                 <div className="flex items-center gap-2">
+                   <ShieldCheck className="w-5 h-5 text-teal-400" />
+                   <span className="text-[10px] font-black uppercase tracking-widest text-teal-400">Excelência Global</span>
+                 </div>
+                 <ArrowRight className="w-5 h-5 text-teal-400 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+              </div>
+            </GlassCard>
+          </a>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8">
@@ -574,7 +709,6 @@ const App: React.FC = () => {
 
            <GlassCard className="relative group cursor-pointer overflow-hidden p-0 min-h-[400px]">
               <div className="absolute inset-0 bg-slate-950/20 z-10 pointer-events-none group-hover:bg-slate-950/0 transition-all"></div>
-              {/* YouTube Embed */}
               <iframe 
                 className="absolute inset-0 w-full h-full border-0"
                 src="https://www.youtube.com/embed/q1-cLnz5XrE?autoplay=0&controls=1&modestbranding=1" 
@@ -633,11 +767,11 @@ const App: React.FC = () => {
             <ArrowRight className="w-10 h-10 group-hover:translate-x-4 transition-transform" />
           </a>
           
-          <p className="mt-16 text-slate-600 text-[10px] font-black uppercase tracking-[0.5em] italic">Veredictos Vision © 2025 | Limited Validation Partnership Phase</p>
+          <p className="mt-16 text-slate-600 text-[10px] font-black uppercase tracking-[0.5em] italic">Veredictos Vision © 2026 | Limited Validation Partnership Phase</p>
         </div>
       </SectionBackground>
 
-      {/* SEÇÃO 7: CONTATO E FOOTER */}
+      {/* FOOTER */}
       <section className="py-24 bg-slate-900 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-20">
           <div>
@@ -667,7 +801,7 @@ const App: React.FC = () => {
           <div className="lg:text-right flex flex-col justify-end">
             <p className="text-slate-500 font-bold mb-4 uppercase tracking-widest text-xs">Informações Corporativas</p>
             <p className="text-slate-300 font-black text-xl mb-2">CNPJ: 62.358.893/0001-07</p>
-            <p className="text-slate-600 text-sm italic">Veredictos Vision Health Tech Labs. São Paulo - Rio de Janeiro, Brasil.</p>
+            <p className="text-slate-600 text-sm italic">Veredictos Vision - Rio de Janeiro, Brasil.</p>
             <div className="mt-12 pt-8 border-t border-white/5 text-[10px] font-black text-slate-600 uppercase tracking-widest">
               A pergunta não é "se funciona". É: você vai implementar antes ou depois dos seus vizinhos?
             </div>
